@@ -1,0 +1,33 @@
+name: Phasic Synthesizer
+description: Synthesizes phase fabric from thorium, silicon and somnite.
+
+type: GenericCrafter
+health: 360
+size: 3
+itemCapacity: 90
+category: crafting
+research: phase-weaver
+requirements: [
+	lead/300
+	somnite/180
+	silicon/270
+	thorium/225
+	phase-fabric/90
+]
+
+hasPower: true
+
+craftTime: 208
+consumes: {
+	power: 8.4
+	items: {
+		items: [
+			somnite/5
+			silicon/18
+			thorium/9
+		]
+	}
+}
+outputItem: phase-fabric/4
+
+drawer: DrawWeave

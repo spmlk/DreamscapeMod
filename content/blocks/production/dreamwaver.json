@@ -1,0 +1,34 @@
+name: Dreamwaver
+description: Simulates sleep patterns to materialise dreams.
+
+type: GenericCrafter
+health: 120
+size: 2
+category: production
+research: graphite-press
+requirements: [
+	copper/40
+	lead/60
+	graphite/30
+]
+
+hasPower: true
+
+craftTime: 144
+consumes: {
+	power: 0.55
+}
+outputItem: somnite/1
+
+updateEffect: {
+	type: ParticleEffect
+	colorFrom: e792ff
+	colorTo: d967f410
+	region: dscape-dream-fx-1
+	
+	particles: 1
+	length: 0
+	sizeFrom: 1.5
+	sizeTo: 0.5
+}
+updateEffectChance: 0.025

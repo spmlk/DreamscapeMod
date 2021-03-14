@@ -1,0 +1,16 @@
+name: Nocton
+description: Used in more advanced reality-bending technology.
+details: "[#5878c4]And the moon rose \n[#eeabff]And the dreams did too"
+
+research: {
+	parent: insomnium
+	requirements: [
+		somnite/77
+		insomnium/77
+		coal/7
+	]
+}
+
+radioactivity: 0.3
+cost: 1.4
+color: 36599a

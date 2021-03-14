@@ -1,0 +1,14 @@
+name: Nocton Wall
+description: Protects structures from enemy bullets. Absorbs lasers and electric arcs.
+
+type: Wall
+health: 675
+size: 1
+
+absorbLasers: true
+
+requirements: [
+	nocton/7
+]
+category: defense
+research: insomnium-wall

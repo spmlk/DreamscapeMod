@@ -1,0 +1,135 @@
+name: Fantasy
+description: Materialises damaging particles and aims them towards enemies.
+
+type: ItemTurret
+size: 5
+health: 2750
+maxAmmo: 210
+category: turret
+research: perception
+requirements: [
+	copper/3000
+	lead/2500
+	somnite/4000
+	metaglass/1800
+	nocton/1000
+	surge-alloy/1200
+	lucidium/800
+]
+
+reloadTime: 54
+burstSpacing: 2
+shots: 25
+inaccuracy: 360
+velocityInaccuracy: 4
+range: 280
+shootCone: 360
+rotateSpeed: 0
+
+recoilAmount: 0
+restitution: 0
+shootEffect: {
+	colorFrom: 75d5b3
+	colorTo: 75d5b3
+	region: dscape-dream-fx-1
+	
+	length: 50
+	lifetime: 12
+	
+	particles: 1
+	cone: 360
+	sizeFrom: 4
+}
+smokeEffect: {
+	sizeFrom: 0
+}
+
+coolantUsage: 1.2
+coolantMultiplier: 0.5
+ammoTypes: {
+	lucidium: {
+		type: BasicBulletType
+		damage: 0
+		hitSize: 1
+		speed: 4
+		lifetime: 35
+		pierceCap: 5
+		
+		fragBullets: 1
+		fragBullet: {
+			type: BasicBulletType
+			damage: 0
+			hitSize: 0
+			speed: 0.1
+			lifetime: 20
+			pierceCap: 3
+			
+			homingPower: 10
+			homingRange: 800
+			fragBullets: 2
+			fragCone: 30
+			fragVelocityMin: 1
+			fragBullet: {
+				type: BasicBulletType
+				damage: 42
+				splashDamage: 15
+				splashDamageRadius: 70
+				speed: 12
+				lifetime: 50
+				pierceCap: 3
+				
+				homingPower: 0.03
+				homingRange: 600
+				status: {
+					name: fantasy-ul
+					damage: 4
+					speedMultiplier: 0.8
+					healthMultiplier: 0.8
+					effect: {
+						colorFrom: 75d5b3
+						colorTo: 75d5b3
+						region: dscape-dream-fx-1
+						
+						length: 12
+						lifetime: 20
+						
+						particles: 1
+						cone: 360
+						sizeFrom: 1.8
+						hitEffect: hitFuse
+						despawnEffect: none
+					}
+					effectChance: 0.4
+				}
+				statusDuration: 5
+				
+				sprite: dscape-shard
+				height: 10
+				width: 6
+				shrinkY: 0
+				frontColor: 75d5b3
+				backColor: 65bea9
+				
+				trailEffect: artilleryTrail
+				trailColor: 65bea9
+				trailChance: 0.3
+			}
+			sprite: large-bomb
+			height: 12
+			width: 12
+			shrinkX: 0.5
+			shrinkY: 0.5
+			spin: 0.4
+			frontColor: 75d5b3
+			backColor: 65bea9
+			hitEffect: none
+			despawnEffect: none
+		}
+		
+		height: 0
+		width: 0
+		hitEffect: none
+		despawnEffect: none
+		ammoMultiplier: 9
+	}
+}

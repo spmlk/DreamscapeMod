@@ -1,0 +1,19 @@
+name: Memory Beacon
+description: A long-range power node with fewer available connections.
+
+type: PowerNode
+health: 420
+size: 2
+category: power
+research: nightlight-node
+requirements: [
+	somnite/25
+	silicon/15
+	titanium/15
+	nocton/30
+	lucidium/12
+]
+
+laserRange: 63
+maxNodes: 3
+laserColor2: 75d5b3

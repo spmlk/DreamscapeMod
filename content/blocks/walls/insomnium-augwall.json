@@ -1,0 +1,17 @@
+name: Insomnium Augmented Wall
+description: Protects structures from enemy bullets. Has a low chance to deflect bullets upon impact.
+
+type: Wall
+health: 3080
+size: 2
+buildCostMultiplier: 5
+
+chanceDeflect: 4
+
+requirements: [
+	graphite/12
+	titanium/16
+	insomnium/12
+]
+category: defense
+research: titanium-wall-large

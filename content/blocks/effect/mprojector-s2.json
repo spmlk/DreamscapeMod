@@ -1,0 +1,36 @@
+name: Lucid Reverter
+description: "Repairs blocks over a huge range by directly altering their properties. \nCan consume lucidium to boost effectivity."
+
+type: MendProjector
+health: 210
+size: 2
+category: effect
+research: mend-projector
+requirements: [
+	lead/180
+	graphite/50
+	somnite/120
+	silicon/150
+	insomnium/80
+]
+
+reload: 27
+healPercent: 0.7
+range: 227
+phaseBoost: 2.24
+phaseRangeBoost: 193
+
+baseColor: a37ad2
+phaseColor: 75d5b3
+
+consumes: {
+	power: 10.7
+	items: {
+		items: [
+			lucidium/1
+		]
+		optional: true
+		booster: true
+	}
+}
+useTime: 96

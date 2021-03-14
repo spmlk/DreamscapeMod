@@ -1,0 +1,34 @@
+name: Dream State Inducer
+description: "Repairs blocks over a large range by reverting them to previous states. \nCan consume insomnium to boost effectivity."
+
+type: MendProjector
+health: 60
+size: 1
+category: effect
+research: mender
+requirements: [
+	lead/20
+	graphite/20
+	somnite/25
+]
+
+reload: 135
+healPercent: 1.9
+range: 109
+phaseBoost: 2.66
+phaseRangeBoost: 12
+
+baseColor: f0cef3
+phaseColor: a37ad2
+
+consumes: {
+	power: 0.95
+	items: {
+		items: [
+			insomnium/1
+		]
+		optional: true
+		booster: true
+	}
+}
+useTime: 270

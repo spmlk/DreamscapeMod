@@ -1,0 +1,56 @@
+name: Nightmare
+description: Rapidly fires piercing bullets at enemies.
+
+type: ItemTurret
+size: 4
+health: 2480
+maxAmmo: 90
+category: turret
+research: cyclone
+requirements: [
+	lead/800
+	metaglass/1000
+	insomnium/600
+	titanium/900
+	nocton/800
+	thorium/600
+	surge-alloy/400
+]
+
+reloadTime: 10
+burstSpacing: 3
+shots: 3
+range: 176
+rotateSpeed: 12
+
+recoilAmount: 1.8
+restitution: 0.1
+xRand: 5
+shootEffect: none
+smokeEffect: none
+
+coolantUsage: 0.8
+coolantMultiplier: 1
+ammoTypes: {
+	insomnium: {
+		type: BasicBulletType
+		damage: 84
+		speed: 6.4
+		lifetime: 30
+		pierceCap: 3
+		
+		status: {
+			name: nightmare-ap
+			damage: 4
+		}
+		statusDuration: 3
+		
+		height: 16
+		width: 10
+		frontColor: a37ad2
+		backColor: 9046c9
+		despawnEffect: flakExplosion
+		
+		ammoMultiplier: 6
+	}
+}

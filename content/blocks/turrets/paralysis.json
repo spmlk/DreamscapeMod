@@ -1,0 +1,42 @@
+name: Paralysis
+description: Fires debilitating arcs at enemies.
+
+type: PowerTurret
+size: 3
+health: 1620
+category: turret
+research: lancer
+requirements: [
+	lead/140
+	silicon/80
+	titanium/120
+	nocton/60
+]
+
+reloadTime: 72
+range: 116
+rotateSpeed: 9
+
+recoilAmount: 2
+restitution: 0.12
+shootEffect: none
+smokeEffect: none
+shootSound: spark
+
+powerUse: 7.4
+hasPower: true
+
+"shootType": {
+	type: LightningBulletType
+	damage: 232
+	lightningLength: 32
+	status: {
+		name: paralysis-db
+		healthMultiplier: 0.9
+		speedMultiplier: 0.7
+		reloadMultiplier: 0.5
+		effect: hitFuse
+		effectChance: 0.18
+		}
+	statusDuration: 54
+}

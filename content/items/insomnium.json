@@ -1,0 +1,14 @@
+name: Insomnium
+description: Used in more advanced reality-bending technology.
+details: A vessel for a dream... but at what cost?
+
+research: {
+	parent: somnite
+	requirements: [
+		somnite/7
+	]
+}
+
+radioactivity: 0.45
+cost: 1.2
+color: 9046c9

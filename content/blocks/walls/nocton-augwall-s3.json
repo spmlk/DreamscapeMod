@@ -1,0 +1,16 @@
+name: Large Dusk Wall
+description: Protects structures from enemy bullets. Absorbs lasers and electric arcs.
+
+type: Wall
+health: 7920
+size: 3
+buildCostMultiplier: 5
+
+absorbLasers: true
+
+requirements: [
+	plastanium/45
+	nocton/36
+]
+category: defense
+research: nocton-augwall

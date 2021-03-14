@@ -1,0 +1,9 @@
+name: Somnite
+description: Used in basic reality-bending technology. Unstable.
+
+research: core-shard
+alwaysUnlocked: true
+
+radioactivity: 1.2
+cost: 0.8
+color: e3b0eb

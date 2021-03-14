@@ -1,0 +1,250 @@
+name: Hallucinogen
+description: Fires a strong overloading shot at enemies.
+
+type: ItemTurret
+health: 1680
+size: 3
+maxAmmo: 24
+category: turret
+research: dopamine
+requirements: [
+	metaglass/160
+	titanium/180
+	nocton/90
+	thorium/120
+]
+
+reloadTime: 18
+inaccuracy: 5
+range: 194
+shootCone: 15
+rotateSpeed: 7
+
+recoilAmount: 1.5
+restitution: 0.2
+shootEffect: none
+smokeEffect: none
+
+ammoTypes: {
+	spore-pod: {
+		type: BasicBulletType
+		damage: 0
+		splashDamage: 32
+		splashDamageRadius: 19
+		speed: 6.3
+		lifetime: 32
+		
+		fragBullets: 4
+		fragCone: 72
+		fragBullet: {
+			type: BasicBulletType
+			damage: 11
+			speed: 4.8
+			lifetime: 10
+			pierceCap: 3
+			buildingDamageMultiplier: 0.3
+			
+			status: {
+				name: hallucinogen-ol-1
+				damage: 0.1
+				damageMultiplier: 0.5
+				reloadMultiplier: 1.5
+				effect: {
+					colorFrom: e3b0eb
+					colorTo: 36599a
+					region: dscape-square
+					offset: 45
+					
+					length: 0
+					lifetime: 20
+					
+					particles: 1
+					cone: 360
+					sizeFrom: 1.8
+				}
+				effectChance: 0.2
+			}
+			statusDuration: 30
+			
+			height: 5
+			width: 5
+			shrinkY: 1
+			frontColor: a37ad2
+			backColor: 9046c9
+			despawnEffect: none
+		}
+		
+		height: 12
+		width: 10
+		frontColor: a37ad2
+		backColor: 9046c9
+		despawnEffect: flakExplosion
+		
+		ammoMultiplier: 2
+	}
+	insomnium: {
+		type: BasicBulletType
+		damage: 0
+		splashDamage: 54
+		splashDamageRadius: 33
+		speed: 6.3
+		lifetime: 32
+		
+		fragBullets: 4
+		fragCone: 72
+		fragBullet: {
+			type: BasicBulletType
+			damage: 21
+			speed: 4.8
+			lifetime: 10
+			pierceCap: 3
+			buildingDamageMultiplier: 0.3
+			
+			status: {
+				name: hallucinogen-ol-2
+				damage: 0.12
+				damageMultiplier: 0.4
+				reloadMultiplier: 1.5
+				effect: {
+					colorFrom: e3b0eb
+					colorTo: 36599a
+					region: dscape-square
+					offset: 45
+					
+					length: 0
+					lifetime: 20
+					
+					particles: 1
+					cone: 360
+					sizeFrom: 1.8
+				}
+				effectChance: 0.2
+			}
+			statusDuration: 30
+			
+			height: 5
+			width: 5
+			shrinkY: 1
+			frontColor: a37ad2
+			backColor: 9046c9
+			despawnEffect: none
+		}
+		
+		height: 15
+		width: 12
+		frontColor: a37ad2
+		backColor: 9046c9
+		despawnEffect: flakExplosion
+		
+		ammoMultiplier: 2
+	}
+	blast-compound: {
+		type: BasicBulletType
+		damage: 0
+		splashDamage: 90
+		splashDamageRadius: 45
+		speed: 6.3
+		lifetime: 32
+		
+		fragBullets: 4
+		fragCone: 72
+		fragBullet: {
+			type: BasicBulletType
+			damage: 18
+			speed: 4.8
+			lifetime: 10
+			pierceCap: 3
+			buildingDamageMultiplier: 0.3
+			
+			status: {
+				name: hallucinogen-ol-3
+				damage: 0.2
+				damageMultiplier: 0.5
+				reloadMultiplier: 1.6
+				effect: {
+					colorFrom: e3b0eb
+					colorTo: 36599a
+					region: dscape-square
+					offset: 45
+					
+					length: 0
+					lifetime: 20
+					
+					particles: 1
+					cone: 360
+					sizeFrom: 1.8
+				}
+				effectChance: 0.2
+			}
+			statusDuration: 30
+			
+			height: 5
+			width: 5
+			shrinkY: 1
+			despawnEffect: none
+		}
+		
+		height: 15
+		width: 12
+		despawnEffect: flakExplosion
+		
+		ammoMultiplier: 2
+	}
+	nocton: {
+		type: BasicBulletType
+		damage: 0
+		splashDamage: 159
+		splashDamageRadius: 36
+		speed: 7.6
+		lifetime: 28
+		
+		fragBullets: 4
+		fragCone: 72
+		fragBullet: {
+			type: BasicBulletType
+			damage: 27
+			speed: 4.8
+			lifetime: 10
+			pierceCap: 3
+			buildingDamageMultiplier: 0.3
+			
+			status: {
+				name: hallucinogen-ol-4
+				damage: 0.15
+				damageMultiplier: 0.3
+				reloadMultiplier: 2
+				effect: {
+					colorFrom: 5a75b2
+					colorTo: 36599a
+					region: dscape-square
+					offset: 45
+					
+					length: 0
+					lifetime: 20
+					
+					particles: 1
+					cone: 360
+					sizeFrom: 2.4
+				}
+				effectChance: 0.3
+			}
+			statusDuration: 54
+			
+			height: 5
+			width: 5
+			shrinkY: 1
+			frontColor: 5a75b2
+			backColor: 36599a
+			despawnEffect: none
+		}
+		
+		height: 17
+		width: 12
+		frontColor: 5a75b2
+		backColor: 36599a
+		despawnEffect: flakExplosion
+		
+		ammoMultiplier: 3
+		reloadMultiplier: 0.8
+	}
+}

@@ -1,0 +1,92 @@
+name: Perception Infuser
+description: Simulates conscious brain activity and infuses it into a mixture of somnite and phase fabric.
+
+type: GenericCrafter
+health: 450
+size: 3
+itemCapacity: 20
+category: crafting
+research: phase-weaver
+requirements: [
+	copper/90
+	lead/250
+	silicon/180
+	insomnium/150
+	nocton/90
+	thorium/150
+	phase-fabric/60
+	surge-alloy/50
+]
+
+hasPower: true
+
+craftTime: 135
+consumes: {
+	power: 6.75
+	items: {
+		items: [
+			somnite/4
+			phase-fabric/1
+		]
+	}
+}
+outputItem: lucidium/1
+
+craftEffect: {
+	type: MultiEffect
+	lifetime: 70
+	effects: [
+		{
+			type: ParticleEffect
+			colorFrom: 75d5b3
+			colorTo: 65bea9
+			region: dscape-dream-fx-1
+			offset: 30
+			
+			length: 20
+			cone: 270
+			lifetime: 70
+			
+			particles: 3
+			sizeFrom: 1.8
+		}
+		{
+			type: ParticleEffect
+			colorFrom: 75d5b3
+			colorTo: 65bea9
+			region: dscape-dream-fx-1
+			offset: -30
+			
+			length: 15
+			lifetime: 70
+			
+			particles: 2
+			sizeFrom: 1.8
+		}
+		{
+			type: ParticleEffect
+			colorFrom: 75d5b3
+			colorTo: 65bea9
+			line: true
+			
+			length: 20
+			lifetime: 30
+			
+			particles: 9
+			strokeFrom: 1.5
+			lenFrom: 3
+			lenTo: 1
+		}
+		{
+			type: WaveEffect
+			colorFrom: 65bea9
+			colorTo: 65bea9b0
+			
+			strokeFrom: 3
+			
+			sizeTo: 18
+			lifetime: 20
+		}
+	]
+}
+drawer: DrawRotator

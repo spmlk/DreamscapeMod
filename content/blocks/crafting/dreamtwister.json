@@ -1,0 +1,43 @@
+name: Dreamtwister
+description: Mixes the essence of somnite with spore pods to produce insomium.
+details: A primitive and risky material is made in the process. However, it's well worth the ability to better handle the essence of dreams.
+
+type: GenericCrafter
+health: 240
+size: 2
+itemCapacity: 15
+category: crafting
+research: cultivator
+requirements: [
+	copper/90
+	metaglass/40
+	silicon/50
+]
+
+hasPower: true
+
+craftTime: 126
+consumes: {
+	power: 0.9
+	items: {
+		items: [
+			somnite/1
+			spore-pod/1
+		]
+	}
+}
+outputItem: insomnium/3
+
+craftEffect: {
+	colorFrom: e3b0eb
+	colorTo: 9046c9
+	region: dscape-square
+	offset: 45
+	
+	length: 12
+	lifetime: 45
+	
+	particles: 7
+	cone: 360
+	sizeFrom: 1.2
+}

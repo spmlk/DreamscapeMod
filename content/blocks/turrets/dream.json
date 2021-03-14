@@ -1,0 +1,103 @@
+name: Dream
+description: Releases a damaging cloud of bullets on ground enemies.
+
+type: ItemTurret
+size: 4
+health: 2320
+maxAmmo: 72
+category: turret
+research: daydream
+requirements: [
+	lead/750
+	somnite/800
+	metaglass/400
+	titanium/600
+	nocton/400
+	phase-fabric/300
+	surge-alloy/400
+]
+
+reloadTime: 224
+inaccuracy: 0
+range: 340
+rotateSpeed: 2
+
+recoilAmount: 4
+restitution: 0.05
+shootEffect: {
+	colorFrom: e3b0eb
+	colorTo: e3b0eb
+	region: dscape-dream-fx-1
+	
+	length: 20
+	lifetime: 150
+	
+	particles: 12
+	cone: 40
+	sizeFrom: 2
+}
+smokeEffect: {
+	sizeFrom: 0
+}
+shootShake: 3
+
+coolantUsage: 0.8
+coolantMultiplier: 1.25
+ammoPerShot: 18
+ammoTypes: {
+	somnite: {
+		type: BasicBulletType
+		damage: 0
+		hitSize: 20
+		splashDamage: 1200
+		splashDamageRadius: 45
+		speed: 20
+		lifetime: 15
+		buildingDamageMultiplier: 0.3
+		
+		fragBullets: 15
+		fragCone: 90
+		fragBullet: {
+			type: BasicBulletType
+			damage: 84
+			hitSize: 90
+			speed: 1.8
+			drag: 0.005
+			lifetime: 480
+			pierceCap: 32
+			pierceBuilding: true
+			buildingDamageMultiplier: 0.3
+			
+			homingPower: 0.01
+			homingRange: 75
+			
+			sprite: large-bomb
+			height: 18
+			width: 18
+			shrinkX: 0.4
+			shrinkY: 0.4
+			spin: 3
+			frontColor: f0cef3
+			backColor: e3b0eb
+			hitEffect: none
+			despawnEffect: none
+			
+			trailEffect: artilleryTrail
+			trailColor: e3b0eb
+			trailChance: 0.2
+		}
+		
+		height: 1
+		width: 1
+		frontColor: f0cef3
+		backColor: e3b0eb
+		hitEffect: none
+		despawnEffect: blastExplosion
+		
+		trailEffect: missileTrail
+		trailColor: f0cef3
+		trailChance: 0.6
+		
+		ammoMultiplier: 1
+	}
+}

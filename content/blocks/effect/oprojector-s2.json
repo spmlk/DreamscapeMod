@@ -1,0 +1,36 @@
+name: Perceptive Generator
+description: Increases the speed of buildings within a distance from it.
+details: Time is always faster when one is sleeping.
+
+type: OverdriveProjector
+health: 150
+size: 2
+itemCapacity: 25
+category: effect
+research: overdrive-projector
+requirements: [
+	lead/210
+	somnite/240
+	metaglass/160
+	silicon/160
+	plastanium/100
+	nocton/70
+	surge-alloy/80
+]
+
+speedBoost: 4.25
+range: 270
+hasBoost: false
+
+baseColor: 5a75b2
+
+consumes: {
+	power: 22.6
+	items: {
+		items: [
+			somnite/5
+			lucidium/1
+		]
+	}
+}
+useTime: 240

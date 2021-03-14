@@ -1,0 +1,187 @@
+name: Dopamine
+description: Fires a strong overloading shot at enemies.
+
+type: ItemTurret
+health: 880
+size: 2
+maxAmmo: 18
+category: turret
+research: salvo
+requirements: [
+	copper/120
+	metaglass/80
+	insomnium/40
+	titanium/70
+]
+
+reloadTime: 27
+inaccuracy: 5
+range: 180
+shootCone: 15
+rotateSpeed: 9
+
+recoilAmount: 1.2
+restitution: 0.2
+shootEffect: none
+smokeEffect: none
+
+ammoTypes: {
+	metaglass: {
+		type: BasicBulletType
+		damage: 0
+		splashDamage: 32
+		splashDamageRadius: 14
+		speed: 5.4
+		lifetime: 35
+		
+		fragBullets: 3
+		fragCone: 60
+		fragBullet: {
+			type: BasicBulletType
+			damage: 12
+			speed: 4.5
+			lifetime: 10
+			pierceCap: 3
+			buildingDamageMultiplier: 0.3
+			
+			status: {
+				name: dopamine-ol-1
+				damage: 0.4
+				effect: {
+					colorFrom: e3b0eb
+					colorTo: 9f57d7
+					region: dscape-square
+					offset: 45
+					
+					length: 0
+					lifetime: 20
+					
+					particles: 1
+					cone: 360
+					sizeFrom: 1.8
+				}
+				effectChance: 0.12
+			}
+			statusDuration: 20
+			
+			height: 5
+			width: 5
+			shrinkY: 1
+			despawnEffect: none
+		}
+		
+		height: 12
+		width: 9
+		despawnEffect: flakExplosion
+		
+		ammoMultiplier: 2
+	}
+	pyratite: {
+		type: BasicBulletType
+		damage: 0
+		splashDamage: 50
+		splashDamageRadius: 18
+		speed: 5.4
+		lifetime: 35
+		
+		fragBullets: 3
+		fragCone: 60
+		fragBullet: {
+			type: BasicBulletType
+			damage: 15
+			speed: 4.5
+			lifetime: 10
+			pierceCap: 3
+			buildingDamageMultiplier: 0.3
+			
+			status: {
+				name: dopamine-ol-2
+				damage: 0.6
+				effect: {
+					colorFrom: f68021
+					colorTo: 9046c9
+					region: dscape-square
+					offset: 45
+					
+					length: 0
+					lifetime: 20
+					
+					particles: 1
+					cone: 360
+					sizeFrom: 1.8
+				}
+				effectChance: 0.18
+			}
+			statusDuration: 15
+			
+			height: 5
+			width: 5
+			shrinkY: 1
+			frontColor: f68021
+			backColor: db661c
+			despawnEffect: none
+		}
+		
+		height: 12
+		width: 9
+		frontColor: f68021
+		backColor: db661c
+		despawnEffect: flakExplosion
+		
+		ammoMultiplier: 2
+	}
+	insomnium: {
+		type: BasicBulletType
+		damage: 0
+		splashDamage: 56
+		splashDamageRadius: 30
+		speed: 5.4
+		lifetime: 35
+		
+		fragBullets: 3
+		fragCone: 60
+		fragBullet: {
+			type: BasicBulletType
+			damage: 24
+			speed: 4.5
+			lifetime: 10
+			pierceCap: 3
+			buildingDamageMultiplier: 0.3
+			
+			status: {
+				name: dopamine-ol-3
+				damage: 0.8
+				effect: {
+					colorFrom: a37ad2
+					colorTo: 9046c9
+					region: dscape-square
+					offset: 45
+					
+					length: 0
+					lifetime: 20
+					
+					particles: 1
+					cone: 360
+					sizeFrom: 1.8
+				}
+				effectChance: 0.2
+			}
+			statusDuration: 10
+			
+			height: 5
+			width: 5
+			shrinkY: 1
+			frontColor: a37ad2
+			backColor: 9046c9
+			despawnEffect: none
+		}
+		
+		height: 12
+		width: 9
+		frontColor: a37ad2
+		backColor: 9046c9
+		despawnEffect: flakExplosion
+		
+		ammoMultiplier: 2
+	}
+}

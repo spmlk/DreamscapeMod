@@ -1,0 +1,43 @@
+name: Void Photon Panel
+description: Uses darkness trapped in nocton to force interactions with photovoltaic cells.
+
+type: SingleTypeGenerator
+health: 120
+size: 2
+category: power
+research: solar-panel
+requirements: [
+	lead/150
+	silicon/210
+	insomnium/120
+	plastanium/90
+	thorium/120
+	lucidium/45
+]
+
+hasItems: true
+itemCapacity: 5
+
+consumes: {
+	items: {
+		items: [
+			nocton/1
+		]
+	}
+}
+itemDuration: 1620
+powerProduction: 4.8
+generateEffect: {
+	colorFrom: 36599a
+	colorTo: 000000
+	region: dscape-square
+	offset: 45
+	
+	baseLength: 7
+	length: 3
+	lifetime: 90
+	
+	particles: 5
+	cone: 360
+	sizeFrom: 1.8
+}

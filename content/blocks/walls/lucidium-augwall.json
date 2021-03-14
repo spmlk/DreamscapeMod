@@ -1,0 +1,23 @@
+name: Dreamcatcher Wall
+description: Protects structures from enemy bullets. Absorbs lasers and electric arcs.
+
+type: Wall
+health: 4560
+size: 2
+buildCostMultiplier: 4
+
+chanceDeflect: 32
+lightningChance: 0.12
+lightningDamage: 74
+lightningLength: 30
+lightningColor: 54d4b5
+
+requirements: [
+	lead/36
+	somnite/32
+	nocton/16
+	thorium/16
+	lucidium/24
+]
+category: defense
+research: thorium-wall-large

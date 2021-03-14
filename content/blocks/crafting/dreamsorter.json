@@ -1,0 +1,42 @@
+name: Dreamsorter
+description: Infuses metaglass with dream essence.
+
+type: GenericCrafter
+health: 270
+size: 3
+itemCapacity: 55
+category: crafting
+research: dreamwaver
+requirements: [
+	copper/80
+	lead/120
+	somnite/60
+	graphite/80
+	titanium/70
+]
+
+hasPower: true
+
+craftTime: 264
+consumes: {
+	power: 2.8
+	items: {
+		items: [
+			metaglass/3
+		]
+	}
+}
+outputItem: somnite/11
+
+updateEffect: {
+	type: ParticleEffect
+	colorFrom: ffffff
+	colorTo: d967f410
+	region: dscape-dream-fx-1
+	
+	particles: 1
+	length: 0
+	sizeFrom: 1.5
+	sizeTo: 0.7
+}
+updateEffectChance: 0.07

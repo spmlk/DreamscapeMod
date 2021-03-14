@@ -1,0 +1,44 @@
+name: Memory Blaster
+description: Infuses explosive blast compound into somnite to produce insomium.
+
+type: GenericCrafter
+health: 420
+size: 3
+itemCapacity: 45
+category: crafting
+research: dreamtwister
+requirements: [
+	copper/160
+	metaglass/120
+	silicon/80
+	insomnium/60
+	thorium/120
+]
+
+hasPower: true
+
+craftTime: 189
+consumes: {
+	power: 6.3
+	items: {
+		items: [
+			somnite/5
+			blast-compound/1
+		]
+	}
+}
+outputItem: insomnium/9
+
+craftEffect: {
+	colorFrom: e792ff
+	colorTo: 9f57d7
+	region: dscape-square
+	offset: 45
+	
+	length: 20
+	lifetime: 72
+	
+	particles: 12
+	cone: 360
+	sizeFrom: 1.8
+}

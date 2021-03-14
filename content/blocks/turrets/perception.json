@@ -1,0 +1,381 @@
+name: Perception
+description: Has different shots depending on the ammo given. Accepts a wide range of ammo.
+
+type: ItemTurret
+health: 1440
+size: 3
+maxAmmo: 24
+category: turret
+research: duo
+alwaysUnlocked: true
+requirements: [
+	copper/350
+	lead/270
+]
+
+reloadTime: 49
+inaccuracy: 3
+range: 115
+shootCone: 10
+rotateSpeed: 12
+
+recoilAmount: 1.2
+restitution: 0.04
+shootEffect: none
+smokeEffect: none
+
+ammoTypes:{
+	 copper: {
+		type: BasicBulletType
+		damage: 22
+		speed: 2.5
+		lifetime: 48
+		
+		height: 11
+		width: 8
+		
+		ammoMultiplier: 1
+		reloadMultiplier: 3.5
+	}
+	scrap: {
+		type: BasicBulletType
+		damage: 16
+		splashDamage: 12
+		splashDamageRadius: 14
+		speed: 2.4
+		lifetime: 50
+		
+		height: 11
+		width: 9
+		despawnEffect: flakExplosion
+		
+		ammoMultiplier: 1
+		reloadMultiplier: 2.4
+	}
+	lead: {
+		type: BasicBulletType
+		damage: 48
+		speed: 3.5
+		lifetime: 35
+		
+		height: 12
+		width: 10
+		despawnEffect: flakExplosion
+		
+		ammoMultiplier: 1
+		reloadMultiplier: 1.8
+	}
+	graphite: {
+		type: BasicBulletType
+		damage: 52
+		splashDamage: 74
+		splashDamageRadius: 20
+		speed: 3
+		lifetime: 42
+		
+		sprite: shell
+		height: 12
+		width: 10
+		despawnEffect: flakExplosion
+		
+		trailEffect: artilleryTrail
+		trailChance: 0.2
+		
+		ammoMultiplier: 1
+		reloadMultiplier: 0.6
+	}
+	somnite: {
+		type: BasicBulletType
+		damage: 35
+		speed: 4.5
+		lifetime: 30
+		pierceCap: 3
+		
+		homingPower: 0.02
+		homingRange: 150
+		
+		sprite: dscape-shard
+		height: 10
+		width: 6
+		frontColor: f0cef3
+		backColor: e3b0eb
+		despawnEffect: none
+		
+		trailEffect: missileTrail
+		trailColor: e3b0eb
+		trailChance: 0.2
+		
+		ammoMultiplier: 1
+		reloadMultiplier: 2.4
+	}
+	metaglass: {
+		type: BasicBulletType
+		damage: 15
+		speed: 3.2
+		lifetime: 42
+		
+		fragBullets: 3
+		fragBullet: {
+			type: BasicBulletType
+			damage: 9
+			speed: 3
+			lifetime: 20
+			
+			height: 5
+			width: 5
+			shrinkY: 1
+			despawnEffect: none
+		}
+		
+		height: 11
+		width: 9
+		despawnEffect: flakExplosion
+		
+		ammoMultiplier: 2
+		reloadMultiplier: 3.2
+	}
+	silicon: {
+		type: BasicBulletType
+		damage: 12
+		splashDamage: 32
+		splashDamageRadius: 18
+		speed: 3.5
+		lifetime: 40
+		
+		homingPower: 0.08
+		
+		sprite: shell
+		height: 12
+		width: 10
+		despawnEffect: flakExplosion
+		
+		trailEffect: artilleryTrail
+		trailChance: 0.2
+		
+		ammoMultiplier: 2
+		reloadMultiplier: 3.2
+	}
+	pyratite: {
+		type: BasicBulletType
+		damage: 48
+		splashDamage: 18
+		splashDamageRadius: 27
+		speed: 3.2
+		lifetime: 42
+		
+		status: burning
+	
+		sprite: shell
+		height: 14
+		width: 12
+		despawnEffect: blastExplosion
+		
+		trailEffect: artilleryTrail
+		trailColor: f68021
+		trailChance: 0.2
+		
+		ammoMultiplier: 1
+		reloadMultiplier: 2
+	}
+	spore-pod: {
+		type: BasicBulletType
+		damage: 9
+		splashDamage: 45
+		splashDamageRadius: 25
+		speed: 2.5
+		lifetime: 50
+		
+		status: tarred
+		
+		sprite: shell
+		height: 12
+		width: 10
+		despawnEffect: flakExplosion
+		
+		ammoMultiplier: 1
+		reloadMultiplier: 1.5
+	}
+	blast-compound: {
+		type: BasicBulletType
+		damage: 24
+		splashDamage: 180
+		splashDamageRadius: 45
+		speed: 2.7
+		lifetime: 50
+		
+		status: blasted
+		statusDuration: 60
+		
+		sprite: shell
+		height: 12
+		width: 10
+		despawnEffect: blastExplosion
+		
+		trailEffect: artilleryTrail
+		trailChance: 0.2
+		
+		ammoMultiplier: 1
+		reloadMultiplier: 0.8
+	}
+	insomnium: {
+		type: BasicBulletType
+		damage: 42
+		speed: 6
+		lifetime: 50
+		pierceCap: 2
+		status: {
+			name: perception-ins
+			damage: 0.2
+			effect: {
+			colorFrom: a37ad2
+				colorTo: 9046c9
+				region: dscape-square
+				offset: 45
+				
+				length: 0
+				lifetime: 40
+				
+				particles: 1
+				cone: 360
+				sizeFrom: 2
+			}
+			effectChance: 0.1
+		}
+		
+		height: 14
+		width: 11
+		backColor: a37ad2
+		
+		ammoMultiplier: 2
+		reloadMultiplier: 4.5
+	}
+	titanium: {
+		type: BasicBulletType
+		damage: 39
+		speed: 5
+		lifetime: 30
+		
+		height: 12
+		width: 10
+		
+		ammoMultiplier: 1
+		reloadMultiplier: 3.5
+	}
+	plastanium: {
+		type: BasicBulletType
+		damage: 13
+		speed: 4.5
+		lifetime: 35
+		
+		fragBullets: 7
+		fragBullet: {
+			type: BasicBulletType
+			damage: 12
+			speed: 3
+			lifetime: 20
+			
+			height: 5
+			width: 5
+			shrinkY: 1
+			despawnEffect: none
+		}
+		height: 12
+		width: 9
+		despawnEffect: plasticExplosion
+		
+		ammoMultiplier: 3
+		reloadMultiplier: 2
+	}
+	nocton: {
+		type: BasicBulletType
+		damage: 24
+		splashDamage: 120
+		splashDamageRadius: 35
+		speed: 7.5
+		lifetime: 35
+		
+		height: 14
+		width: 11
+		backColor: 5a75b2
+		despawnEffect: blastExplosion
+		
+		ammoMultiplier: 2
+		reloadMultiplier: 1.2
+	}
+	thorium: {
+		type: BasicBulletType
+		damage: 42
+		speed: 6
+		lifetime: 27
+		
+		height: 14
+		width: 10
+		
+		ammoMultiplier: 3
+		reloadMultiplier: 3.2
+	}
+	surge-alloy: {
+		type: BasicBulletType
+		damage: 32
+		speed: 5
+		lifetime: 32
+		
+		lightning: 1
+		lightningDamage: 27
+		height: 12
+		width: 8
+		
+		ammoMultiplier: 6
+		reloadMultiplier: 3.5
+	}
+	phase-fabric: {
+		type: BasicBulletType
+		damage: 24
+		hitSize: 10
+		speed: 7.5
+		lifetime: 22
+		pierceCap: 7
+		
+		homingPower: 0.06
+		homingRange: 150
+		
+		sprite: dscape-shard
+		height: 12
+		width: 8
+		frontColor: fff3d6
+		backColor: ffd59e
+		despawnEffect: none
+		
+		trailEffect: missileTrail
+		trailColor: ffd59e
+		trailChance: 0.4
+		
+		ammoMultiplier: 8
+		reloadMultiplier: 11.5
+	}
+	lucidium: {
+		type: BasicBulletType
+		damage: 54
+		hitSize: 10
+		speed: 8.4
+		lifetime: 20
+		pierceCap: 7
+		
+		homingPower: 0.08
+		homingRange: 150
+		
+		sprite: dscape-shard
+		height: 14
+		width: 8
+		frontColor: 75d5b3
+		backColor: 65bea9
+		despawnEffect: none
+		
+		trailEffect: missileTrail
+		trailColor: 65bea9
+		trailChance: 0.5
+		
+		ammoMultiplier: 6
+		reloadMultiplier: 6.3
+	}
+}

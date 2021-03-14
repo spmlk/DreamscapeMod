@@ -1,0 +1,239 @@
+name: Daydream
+description: Releases a damaging cloud of bullets on ground enemies. Bullets can hit air enemies.
+
+type: ItemTurret
+size: 2
+health: 720
+maxAmmo: 12
+category: turret
+research: hail
+requirements: [
+	somnite/70
+	metaglass/60
+	titanium/60
+]
+
+reloadTime: 105
+inaccuracy: 0
+range: 275
+rotateSpeed: 2
+
+targetAir: false
+
+recoilAmount: 1.5
+restitution: 0.07
+shootEffect: {
+	colorFrom: e3b0eb
+	colorTo: e3b0eb
+	region: dscape-dream-fx-1
+	
+	length: 15
+	lifetime: 60
+	
+	particles: 4
+	cone: 40
+	sizeFrom: 2
+}
+smokeEffect: {
+	sizeFrom: 0
+}
+shootShake: 1.5
+
+ammoTypes: {
+	somnite: {
+		type: BasicBulletType
+		damage: 0
+		hitSize: 40
+		speed: 20
+		lifetime: 15
+		
+		fragBullets: 5
+		fragCone: 75
+		fragBullet: {
+			type: BasicBulletType
+			damage: 17
+			hitSize: 72
+			speed: 1.5
+			drag: 0.01
+			lifetime: 216
+			pierceCap: 20
+			pierceBuilding: true
+			buildingDamageMultiplier: 0.1
+			
+			sprite: large-bomb
+			height: 12
+			width: 12
+			shrinkX: 0.3
+			shrinkY: 0.3
+			spin: 2
+			frontColor: f0cef3
+			backColor: e3b0eb
+			hitEffect: none
+			despawnEffect: none
+			
+			trailEffect: artilleryTrail
+			trailColor: e3b0eb
+			trailChance: 0.2
+		}
+		
+		height: 1
+		width: 1
+		frontColor: f0cef3
+		backColor: e3b0eb
+		hitEffect: none
+		despawnEffect: flakExplosion
+		
+		trailEffect: missileTrail
+		trailColor: f0cef3
+		trailChance: 0.6
+		
+		ammoMultiplier: 1
+	}
+	silicon: {
+		type: BasicBulletType
+		damage: 0
+		hitSize: 40
+		speed: 20
+		lifetime: 15
+		
+		fragBullets: 5
+		fragCone: 75
+		fragBullet: {
+			type: BasicBulletType
+			damage: 23
+			hitSize: 72
+			speed: 1.5
+			drag: 0.01
+			lifetime: 216
+			pierceCap: 20
+			pierceBuilding: true
+			buildingDamageMultiplier: 0.1
+			
+			sprite: large-bomb
+			height: 12
+			width: 12
+			shrinkX: 0.3
+			shrinkY: 0.3
+			spin: 2
+			frontColor: f0cef3
+			backColor: e3b0eb
+			hitEffect: none
+			despawnEffect: none
+			
+			trailEffect: artilleryTrail
+			trailColor: e3b0eb
+			trailChance: 0.2
+		}
+		
+		height: 1
+		width: 1
+		frontColor: f0cef3
+		backColor: e3b0eb
+		hitEffect: none
+		despawnEffect: flakExplosion
+		
+		trailEffect: missileTrail
+		trailColor: f0cef3
+		trailChance: 0.6
+		
+		ammoMultiplier: 1
+	}
+	insomnium: {
+		type: BasicBulletType
+		damage: 0
+		hitSize: 40
+		speed: 20
+		lifetime: 15
+		
+		fragBullets: 5
+		fragCone: 75
+		fragBullet: {
+			type: BasicBulletType
+			damage: 36
+			hitSize: 72
+			speed: 1.5
+			drag: 0.01
+			lifetime: 216
+			pierceCap: 20
+			pierceBuilding: true
+			buildingDamageMultiplier: 0.1
+			
+			sprite: large-bomb
+			height: 12
+			width: 12
+			shrinkX: 0.3
+			shrinkY: 0.3
+			spin: 2
+			frontColor: f0cef3
+			backColor: e3b0eb
+			hitEffect: none
+			despawnEffect: none
+			
+			trailEffect: artilleryTrail
+			trailColor: e3b0eb
+			trailChance: 0.2
+		}
+		
+		height: 1
+		width: 1
+		frontColor: f0cef3
+		backColor: e3b0eb
+		hitEffect: none
+		despawnEffect: flakExplosion
+		
+		trailEffect: missileTrail
+		trailColor: f0cef3
+		trailChance: 0.6
+		
+		ammoMultiplier: 1
+	}
+	plastanium: {
+		type: BasicBulletType
+		damage: 0
+		hitSize: 40
+		speed: 20
+		lifetime: 15
+		
+		fragBullets: 7
+		fragCone: 75
+		fragBullet: {
+			type: BasicBulletType
+			damage: 31
+			hitSize: 72
+			speed: 1.5
+			drag: 0.01
+			lifetime: 216
+			pierceCap: 20
+			pierceBuilding: true
+			buildingDamageMultiplier: 0.1
+			
+			sprite: large-bomb
+			height: 12
+			width: 12
+			shrinkX: 0.3
+			shrinkY: 0.3
+			spin: 2
+			frontColor: f0cef3
+			backColor: e3b0eb
+			hitEffect: none
+			despawnEffect: none
+			
+			trailEffect: artilleryTrail
+			trailColor: e3b0eb
+			trailChance: 0.2
+		}
+		
+		height: 1
+		width: 1
+		frontColor: f0cef3
+		backColor: e3b0eb
+		hitEffect: none
+		despawnEffect: flakExplosion
+		
+		trailEffect: missileTrail
+		trailColor: f0cef3
+		trailChance: 0.6
+		
+		ammoMultiplier: 1
+	}
+}

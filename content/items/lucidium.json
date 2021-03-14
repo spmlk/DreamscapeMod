@@ -1,0 +1,15 @@
+name: Lucidium
+description: Used in the most advanced of reality-bending technology.
+details: "[#54d4b5]The universe is at your fingertips now."
+
+research: {
+	parent: somnite
+	requirements: [
+		somnite/77
+		phase-fabric/77
+	]
+}
+
+radioactivity: -0.01
+cost: 1.8
+color: 65bea9

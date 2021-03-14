@@ -1,0 +1,17 @@
+name: Large Somnite Augmented Wall
+description: Protects structures from enemy bullets. Has a low chance to deflect bullets upon impact.
+
+type: Wall
+health: 5040
+size: 3
+buildCostMultiplier: 5
+
+chanceDeflect: 2
+
+requirements: [
+	copper/36
+	lead/36
+	somnite/27
+]
+category: defense
+research: somnite-augwall
