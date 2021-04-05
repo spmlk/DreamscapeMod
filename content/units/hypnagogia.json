@@ -1,0 +1,221 @@
+name: Hypnagogia
+description: Fires a shrapnel shooting piercing shell and a barrage of shots at enemies.
+
+type: flying
+flying: true
+research: parasomnia
+
+health: 13700
+armor: 15
+itemCapacity: 210
+speed: 0.9
+rotateSpeed: 3
+drag: 0.02
+accel: 0.04
+
+commandLimit: 8
+
+engineOffset: 18
+engineSize: 5.5
+hitSize: 36
+
+weapons: [
+	{
+		name: hypnagogia-sh
+		x: 0
+		y: 4
+		top: false
+		mirror: false
+		
+		shootSound: laser
+		shake: 7
+		
+		reload: 320
+		shootCone: 30
+		ignoreRotation: true
+		bullet: {
+			type: BasicBulletType
+			damage: 584
+			hitSize: 21
+			speed: 1.2
+			lifetime: 214
+			pierceCap: 5
+			pierceBuilding: true
+			buildingDamageMultiplier: 0.5
+			
+			homingPower: 0.01
+			homingRange: 120
+			fragBullets: 3
+			fragBullet: {
+				type: ShrapnelBulletType
+				damage: 288
+				length: 14
+				width: 23
+				buildingDamageMultiplier: 0.5
+				
+				serrations: 3
+				
+				fromColor: 75d5b3
+				toColor: 65bea9
+			}
+			despawnShake: 3
+			
+			sprite: dscape-orb
+			height: 18
+			width: 18
+			shrinkY: 0
+			frontColor: 75d5b3
+			backColor: 65bea9
+			
+			trailEffect: {
+				type: ParticleEffect
+				
+				colorFrom: 75d5b3
+				colorTo: 75d5b3
+				
+				baseLength: 0
+				length: 12
+				lifetime: 45
+				
+				particles: 3
+				cone: 360
+				sizeFrom: 2
+			}
+			trailColor: 65bea9
+			trailChance: 0.1
+			
+			shootEffect: {
+				type: ParticleEffect
+				
+				colorFrom: 75d5b3
+				colorTo: 75d5b3
+				region: dscape-dream-fx-1
+				
+				baseLength: 20
+				length: 25
+				lifetime: 210
+				
+				particles: 9
+				cone: 360
+				sizeFrom: 5
+			}
+			smokeEffect: none
+			
+			hitEffect: {
+				type: ParticleEffect
+				
+				colorFrom: 75d5b3
+				colorTo: 75d5b3
+				region: dscape-dream-fx-1
+				
+				baseLength: 0
+				length: 40
+				lifetime: 75
+				
+				particles: 5
+				cone: 360
+				sizeFrom: 3
+			}
+			despawnEffect: none
+		}
+	}
+	{
+		name: hypnagogia-mg
+		x: 10
+		y: -11
+		alternate: true
+		rotate: true
+		
+		shootSound: shootBig
+		
+		reload: 14
+		shots: 2
+		shotDelay: 6
+		
+		shootCone: 12
+		bullet: {
+			type: BasicBulletType
+			damage: 49
+			speed: 5.4
+			lifetime: 30
+			
+			height: 14
+			width: 9
+			smokeEffect: none
+		}
+	}
+	{
+		name: hypnagogia-mg
+		x: 16
+		y: 13
+		alternate: true
+		rotate: true
+		
+		shootSound: shootBig
+		
+		reload: 11
+		shots: 2
+		shotDelay: 6
+		
+		shootCone: 12
+		bullet: {
+			type: BasicBulletType
+			damage: 49
+			speed: 5.4
+			lifetime: 30
+			
+			height: 14
+			width: 9
+			smokeEffect: none
+		}
+	}
+	{
+		name: hypnagogia-ms
+		x: 13
+		y: 2
+		alternate: true
+		rotate: true
+		
+		shootSound: missile
+		
+		reload: 21
+		shots: 3
+		
+		shootCone: 20
+		inaccuracy: 18
+		velocityRnd: 0.2
+		bullet: {
+			type: BasicBulletType
+			damage: 24
+			splashDamage: 72
+			splashDamageRadius: 33
+			speed: 4.5
+			keepVelocity: false
+			lifetime: 40
+			
+			homingPower: 0.08
+			status: blasted
+			statusDuration: 60
+			
+			weaveScale: 5
+			weaveMag: 1.5
+			
+			sprite: missile
+			height: 11
+			width: 10
+			shrinkY: 0
+			frontColor: f8ad42
+			backColor: f68021
+			
+			trailEffect: missileTrail
+			trailColor: f68021
+			trailChance: 0.2
+			
+			smokeEffect: none
+			
+			hitEffect: blastExplosion
+		}
+	}
+]
+
+

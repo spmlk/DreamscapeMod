@@ -1,0 +1,111 @@
+name: Narcolepsy
+description: Fires a laser and a barrage of shots at enemies.
+
+type: flying
+flying: true
+research: relapse
+
+health: 450
+armor: 3
+itemCapacity: 40
+speed: 2.1
+rotateSpeed: 8
+drag: 0.02
+accel: 0.05
+
+commandLimit: 8
+
+engineOffset: 10.5
+engineSize: 3
+hitSize: 28
+
+weapons: [
+	{
+		name: narcolepsy-mg
+		x: 7.5
+		y: -5
+		alternate: true
+		rotate: true
+		
+		shootSound: shoot
+		
+		reload: 7
+		
+		shootCone: 12
+		bullet: {
+			type: BasicBulletType
+			damage: 9
+			speed: 4.5
+			lifetime: 32
+			
+			height: 9
+			width: 5
+			
+			smokeEffect: none
+		}
+	}
+	{
+		name: narcolepsy-lz
+		x: 0
+		y: 5
+		top: false
+		mirror: false
+		
+		shootSound: laser
+		shake: 1
+		
+		reload: 50
+		
+		shootCone: 10
+		ignoreRotation: true
+		bullet: {
+			type: LaserBulletType
+			damage: 32
+			length: 164
+			width: 12
+			lifetime: 15
+			buildingDamageMultiplier: 0.5
+			
+			colors: [65bea966, 75d5b3ff, 75d5b3ff]
+			
+			shootEffect: {
+				type: ParticleEffect
+				
+				colorFrom: 75d5b3
+				colorTo: 75d5b3
+				region: dscape-dream-fx-1
+				
+				baseLength: 0
+				length: 20
+				lifetime: 40
+				
+				particles: 6
+				cone: 45
+				sizeFrom: 2
+			}
+			smokeEffect: none
+			
+			hitEffect: {
+				type: ParticleEffect
+				
+				colorFrom: 75d5b3
+				colorTo: 75d5b3
+				line: true
+				
+				baseLength: 0
+				length: 30
+				lifetime: 50
+				
+				particles: 3
+				cone: 45
+				strokeFrom: 1.5
+				strokeTo: 1
+				lenFrom: 4
+				lenTo: 0
+			}
+			despawnEffect: none
+		}
+	}
+]
+
+

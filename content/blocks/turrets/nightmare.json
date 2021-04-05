@@ -29,6 +29,8 @@ xRand: 5
 shootEffect: none
 smokeEffect: none
 
+shootSound: shootBig
+
 coolantUsage: 0.8
 coolantMultiplier: 1
 ammoTypes: {

@@ -1,0 +1,39 @@
+name: Complex Reimaginer
+description: Upgrades inputted units to the fourth and final tier.
+
+type: Reconstructor
+health: 1715
+size: 7
+category: units
+research: advanced-reimaginer
+requirements: [
+	lead/5500
+	metaglass/2100
+	silicon/1800
+	plastanium/800
+	nocton/700
+	surge-alloy/1200
+	lucidium/600
+]
+
+liquidCapacity: 60
+consumes: {
+	power: 32.5
+	items: {
+		items:[
+			metaglass/1200
+			silicon/900
+			surge-alloy/700
+			lucidium/400
+		]
+	}
+	liquid: {
+		liquid: cryofluid
+		amount: 1.25
+	}
+}
+
+constructTime: 16800
+upgrades: [
+	[parasomnia, hypnagogia]
+]

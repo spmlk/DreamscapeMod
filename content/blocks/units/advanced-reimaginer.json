@@ -1,0 +1,37 @@
+name: Advanced Reimaginer
+description: Upgrades inputted units to the third tier.
+
+type: Reconstructor
+health: 900
+size: 5
+category: units
+research: elementary-reimaginer
+requirements: [
+	lead/1100
+	somnite/700
+	metaglass/900
+	titanium/1200
+	nocton/600
+	phase-fabric/450
+]
+
+liquidCapacity: 60
+consumes: {
+	power: 11.25
+	items: {
+			items:[
+				silicon/540
+				insomnium/420
+				plastanium/320
+		]
+	}
+	liquid: {
+		liquid: cryofluid
+		amount: 0.75
+	}
+}
+
+constructTime: 4500
+upgrades: [
+	[narcolepsy, parasomnia]
+]

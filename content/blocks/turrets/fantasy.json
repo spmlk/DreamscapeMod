@@ -74,6 +74,7 @@ ammoTypes: {
 				damage: 42
 				splashDamage: 15
 				splashDamageRadius: 70
+				knockback: 1.2
 				speed: 12
 				lifetime: 50
 				pierceCap: 3

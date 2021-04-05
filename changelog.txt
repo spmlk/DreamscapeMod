@@ -1,0 +1,17 @@
+Dreamscape Mod Changelog
+
+--1.1--
+New content
+> Added Core: Memory and its respective unit, Reminiscence.
+> Added 1 unit factory and 3 reconstructors, with 4 tiers of units.
+> Added a line of units for use with the factories
+	> Relapse -> Narcolepsy -> Parasomnia -> Hypnagogia
+
+Changes
+> Dream and Daydream get new shoot effects.
+> Fantasy's damaging bullets get knockback. (0 -> 1.2)
+> Changed shoot sounds for Nightmare and Daydream
+> Removed half the walls
+
+--1.0--
+Initial release.

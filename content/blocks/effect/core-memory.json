@@ -1,0 +1,20 @@
+name: "Core: Memory"
+description: Core of the base. More fragile than the Nucleus, but has much better storage and a stronger unit.
+
+type: CoreBlock
+health: 5100
+size: 6
+itemCapacity: 27500
+unitCapModifier: 45
+unitType: reminiscence
+category: effect
+research: core-nucleus
+researchCostMultiplier: 0.1
+requirements: [
+	copper/11000
+	lead/10500
+	somnite/7000
+	silicon/7500
+	phase-fabric/2500
+	lucidium/1500
+]

@@ -28,16 +28,18 @@ shootEffect: {
 	region: dscape-dream-fx-1
 	
 	length: 15
-	lifetime: 60
+	lifetime: 15
 	
 	particles: 4
-	cone: 40
+	cone: 5
 	sizeFrom: 2
 }
 smokeEffect: {
 	sizeFrom: 0
 }
 shootShake: 1.5
+
+shootSound: railgun
 
 ammoTypes: {
 	somnite: {

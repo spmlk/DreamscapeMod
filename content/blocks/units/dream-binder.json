@@ -1,0 +1,29 @@
+name: Dream Binder
+description: Forms essence into various units. Output units can be used directly, or moved into reimaginers for upgrading.
+
+type: UnitFactory
+health: 420
+size: 3
+category: units
+research: ground-factory
+requirements: [
+	copper/70
+	lead/50
+	somnite/80
+	metaglass/50
+]
+
+consummes: {
+	power: 1.4
+}
+
+plans: [
+	{
+		unit: relapse
+		time: 900
+		requirements: [
+			somnite/20
+			silicon/30
+		]
+	}
+]

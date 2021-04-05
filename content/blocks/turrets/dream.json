@@ -23,23 +23,25 @@ range: 340
 rotateSpeed: 2
 
 recoilAmount: 4
-restitution: 0.05
+restitution: 0.015
 shootEffect: {
 	colorFrom: e3b0eb
 	colorTo: e3b0eb
 	region: dscape-dream-fx-1
 	
 	length: 20
-	lifetime: 150
+	lifetime: 40
 	
-	particles: 12
-	cone: 40
+	particles: 7
+	cone: 5
 	sizeFrom: 2
 }
 smokeEffect: {
 	sizeFrom: 0
 }
 shootShake: 3
+
+shootSound: railgun
 
 coolantUsage: 0.8
 coolantMultiplier: 1.25
@@ -92,11 +94,61 @@ ammoTypes: {
 		frontColor: f0cef3
 		backColor: e3b0eb
 		hitEffect: none
-		despawnEffect: blastExplosion
+		despawnEffect: {
+			type: MultiEffect
+			effects: [
+				{
+					type: ParticleEffect
+				
+					colorFrom: f0cef3
+					colorTo: f0cef3
+					line: true
+					
+					baseLength: 0
+					length: 30
+					lifetime: 50
+					
+					particles: 7
+					cone: 360
+					strokeFrom: 1.5
+					srokeTo: 1
+					lenFrom: 4
+					lenTo: 0
+				}
+				{
+					type: WaveEffect
+				
+					colorFrom: f0cef3
+					colorTo: f0cef3
+					line: true
+					
+					sizeFrom: 0
+					sizeTo: 20
+					lifetime: 15
+					
+					strokeFrom: 2
+					srokeTo: 0
+				}
+			]
+		}
 		
-		trailEffect: missileTrail
+		trailEffect: {
+			type: ParticleEffect
+		
+			colorFrom: f0cef3
+			colorTo: f0cef3
+			region: dscape-dream-fx-1
+	
+			baseLength: 0
+			length: 8
+			lifetime: 120
+			
+			particles: 1
+			cone: 360
+			sizeFrom: 2
+		}
 		trailColor: f0cef3
-		trailChance: 0.6
+		trailChance: 1
 		
 		ammoMultiplier: 1
 	}

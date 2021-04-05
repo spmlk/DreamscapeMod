@@ -1,0 +1,108 @@
+name: Relapse
+description: Flies towards enemies and self-destructs, dropping a cluster of bombs.
+
+type: flying
+flying: true
+circleTarget: true
+research: dream-binder
+
+health: 60
+itemCapacity: 20
+speed: 3.6
+rotateSpeed: 5
+drag: 0.015
+accel: 0.03
+
+commandLimit: 4
+
+engineOffset: 4
+engineSize: 2
+hitSize: 9
+
+range: 24
+weapons: [
+	{
+		name: relapse-kk
+		x: 0
+		y: 0
+		top: false
+		mirror: false
+		
+		shootSound: explosion
+		shake: 4
+		
+		reload: 75
+		
+		shootCone: 120
+		ignoreRotation: true
+		bullet: {
+			type: BasicBulletType
+			damage: 0
+			splashDamage: 54
+			splashDamageRadius: 72
+			speed: 3
+			lifetime: 10
+			
+			instantDisappear: true
+			killShooter: true
+			hittable: false
+			
+			sprite: clear
+			
+			shootEffect: none
+			smokeEffect: none
+			
+			hitEffect: none
+			despawnEffect: {
+				type: MultiEffect
+				effects: [
+					{
+						type: ParticleEffect
+					
+						colorFrom: 75d5b3
+						colorTo: 75d5b3
+						region: dscape-dream-fx-1
+						
+						baseLength: 0
+						length: 30
+						lifetime: 90
+						
+						particles: 7
+						cone: 360
+						sizeFrom: 5
+					}
+					{
+						type: ParticleEffect
+					
+						colorFrom: a2a2a2
+						colorTo: a2a2a2
+						
+						baseLength: 0
+						length: 75
+						lifetime: 60
+						
+						particles: 11
+						cone: 360
+						sizeFrom: 3
+					}
+					{
+						type: WaveEffect
+					
+						colorFrom: 75d5b3
+						colorTo: 65bea9
+						line: true
+						
+						sizeFrom: 0
+						sizeTo: 30
+						lifetime: 30
+						
+						strokeFrom: 4
+						srokeTo: 0
+					}
+				]
+			}
+		}
+	}
+]
+
+
